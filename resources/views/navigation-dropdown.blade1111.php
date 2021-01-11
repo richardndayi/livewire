@@ -16,25 +16,6 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
-                @can('task_access')
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('tasks.index') }}" :active="request()->routeIs('categoriecomptes.*')">
-                        tasks
-                        </x-jet-nav-link>
-                    </div>
-                @endcan
-                
-                <li><a class="" href="{{ url('categorie_comptes')}}">
-						<span class="fa fa-bar-chart">&nbsp;</span> Categorie compte
-					</a></li>
-                    
-                @can('user_access')
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('users.index') }}" :active="request()->routeIs('users.*')">
-                            Users
-                        </x-jet-nav-link>
-                    </div>
-                @endcan
             </div>
 
             <!-- Settings Dropdown -->
